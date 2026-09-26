@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Jejak Uang - E-Porto Ekonomi Digital</title>
+<style>
+body{font-family:Segoe UI;background:#eef5fb;margin:0;color:#14213d}
+header{background:#073b7a;color:white;padding:50px;text-align:center}
+section{max-width:1000px;margin:25px auto;background:white;padding:30px;border-radius:25px;box-shadow:0 8px 25px #0002}
+img{max-width:100%;border-radius:20px}.grid{display:flex;flex-wrap:wrap;gap:20px}.card{flex:1;min-width:220px;background:#edf6ff;padding:20px;border-radius:18px}
+h2{color:#073b7a}
+
+.hero-img{width:100%;border-radius:25px;margin:20px 0;box-shadow:0 8px 25px #0003}
+.material-img{width:100%;max-height:260px;object-fit:cover;border-radius:18px;margin-bottom:15px}
+.visual-card{background:#f1f8ff;border-radius:18px;padding:15px;text-align:center;flex:1;min-width:220px}.clickable{cursor:pointer;transition:.3s}.clickable:hover{transform:scale(1.03)}.modal{display:none;position:fixed;z-index:10;left:0;top:0;width:100%;height:100%;background:#0008}.modal-content{background:white;width:80%;max-width:800px;margin:5% auto;padding:25px;border-radius:25px}.modal-content img{width:100%}.close{float:right;font-size:30px;cursor:pointer}
+
+.modal{display:none;position:fixed;z-index:999;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.65);overflow:auto}
+.modal-content{background:white;margin:3% auto;padding:35px;border-radius:25px;max-width:900px;line-height:1.7;max-height:85vh;overflow-y:auto}
+.close{float:right;font-size:35px;cursor:pointer}
+.clickable{cursor:pointer}
+
+.game-card{background:linear-gradient(135deg,#eef7ff,#f8f0ff);padding:24px;border-radius:24px;text-align:center;}
+.game-frame-wrap{width:100%;height:720px;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 10px 30px #0002;margin:18px 0;}
+.game-frame{width:100%;height:100%;border:0;}
+.game-open{display:inline-block;background:#073b7a;color:white;text-decoration:none;padding:12px 20px;border-radius:14px;font-weight:700;margin-top:8px;}
+.game-note{font-size:.92rem;color:#52606d;}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>💰 Jejak Uang: Dari Barter Hingga Ekonomi Digital</h1>
+<p>E-Portofolio IPS Kelas IX | Tema 2 Perkembangan Ekonomi Digital</p>
+</header>
+<section>
+<h2>🚀 Gambaran Perkembangan Ekonomi Digital</h2>
+<img class="hero-img" src="assets/cover_ekonomi_digital.png">
+<p>Perjalanan ekonomi manusia berkembang dari barter hingga pembayaran digital modern seperti QRIS, e-wallet, dan mobile banking.</p>
+</section>
+
+<section>
+<h2>🌎 Pendahuluan</h2>
+<div class="card clickable" onclick="openPendahuluan()">
+<img src="assets/cover_ekonomi_digital.png" class="material-img">
+<b>Pendahuluan</b>
+<p>🖱️ Klik gambar Pendahuluan untuk membuka video pembelajaran.</p>
+</div>
+</section>
+
+<section>
+<h2>🪙 Asal Mula Terciptanya Uang</h2>
+<div class="grid">
+<div class="card clickable" onclick="openBarter()"><img src="assets/barter.png" class="material-img"><b>Barter</b><p>🖱️ Klik gambar Barter untuk membuka materi lengkap.</p></div>
+<div class="card clickable" onclick="openUangBarang()">
+<img src="assets/uang_barang.png" class="material-img">
+<b>Uang Barang</b>
+<p>🖱️ Klik gambar Uang Barang untuk membuka materi lengkap.</p>
+</div>
+<div class="card clickable" onclick="openUangLogam()">
+<img src="assets/uang_logam.png" class="material-img">
+<b>Uang Logam</b>
+<p>🖱️ Klik gambar Uang Logam untuk membuka materi lengkap.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>📜 Sejarah Perkembangan Uang</h2>
+<div class="card clickable" onclick="openSejarahUang()">
+<img src="assets/sejarah_uang.png" class="material-img">
+<b>Sejarah Perkembangan Uang</b>
+<p>🖱️ Klik gambar untuk melihat detail sejarah uang.</p>
+</div>
+</section>
+
+<section>
+<h2>💡 Fungsi Uang</h2>
+<div class="card clickable" onclick="openFungsiUang()">
+<img src="assets/fungsi_uang.png" class="material-img">
+<b>Fungsi Uang</b>
+<p>🖱️ Klik gambar untuk melihat detail fungsi uang.</p>
+</div>
+</section>
+
+<section>
+<h2>💳 Jenis-Jenis Uang</h2>
+<div class="card clickable" onclick="openJenisUang()">
+<img src="assets/jenis_uang.png" class="material-img">
+<b>Jenis-Jenis Uang</b>
+<p>🖱️ Klik gambar untuk melihat detail jenis uang.</p>
+</div>
+</section>
+
+<section>
+<h2>🎮 Misi Uang</h2>
+<div class="card game-card">
+<h3>🪙 Tantangan Misi Uang</h3>
+<p>Uji pemahamanmu tentang uang melalui game pembelajaran interaktif.</p>
+<div class="game-frame-wrap">
+<iframe class="game-frame" src="misi-uang-kelas/index.html" title="Misi Uang"></iframe>
+</div>
+<p class="game-note">Untuk login siswa/guru dan rekap skor, jalankan <b>2-JALANKAN-GAME.bat</b> dari folder utama, lalu buka alamat server yang tampil. Jika belum ada akun guru, sistem membuat akun awal <b>guru</b> dengan kata sandi <b>MisiUang12345</b>.</p>
+<a class="game-open" href="misi-uang-kelas/index.html" target="_blank">🚀 Buka Misi Uang Fullscreen</a>
+</div>
+</section>
+
+<section>
+<h2>📘 LKPD Misi Uang</h2>
+<div class="card clickable" onclick="openLKPD()">
+<img src="assets/lkpd_misi_uang.png" class="material-img">
+<b>LKPD Misi Uang</b>
+<p>🖱️ Klik gambar untuk melihat LKPD lebih jelas.</p>
+</div>
+</section>
+
+<div id="barterModal" class="modal"><div class="modal-content"><span class="close" onclick="closeBarter()">&times;</span><h2>🪵 Sistem Barter</h2><img src="assets/barter.png"><p><b>Pada awal kehidupan manusia, masyarakat belum mengenal uang.</b> Kebutuhan hidup dipenuhi dengan memanfaatkan sumber daya alam di lingkungan sekitar. Ketika masyarakat mulai menetap dan melakukan kegiatan ekonomi, mereka mulai melakukan <b>pertukaran barang</b> untuk memenuhi kebutuhan.</p>
+<p>Pada masa tersebut digunakan sistem <b>barter</b>, yaitu pertukaran barang dengan barang yang dianggap memiliki nilai yang sama.</p>
+<p><b>Contoh:</b> seorang petani menukar sayuran dengan ikan dari nelayan untuk memenuhi kebutuhan hidup.</p>
+<p><b>Namun, barter memiliki berbagai kesulitan, antara lain:</b></p>
+<ul>
+<li>Sulit menemukan orang yang memiliki barang yang dibutuhkan.</li>
+<li>Sulit menentukan nilai tukar yang sesuai.</li>
+<li>Tidak semua barang mudah dibagi.</li>
+<li>Tidak semua barang mudah disimpan.</li>
+<li>Pertukaran menjadi semakin sulit ketika kebutuhan masyarakat semakin kompleks.</li>
+</ul>
+<p>Karena kelemahan barter tersebut, masyarakat membutuhkan <b>alat pertukaran yang lebih praktis dan diterima oleh banyak orang</b>, sehingga kemudian berkembanglah uang.</p></div></div><script>function openBarter(){document.getElementById('barterModal').style.display='block'}function closeBarter(){document.getElementById('barterModal').style.display='none'}window.onclick=function(e){if(e.target==document.getElementById('barterModal'))closeBarter()}</script>
+<script>
+function openBarter(){
+ const modal=document.getElementById("barterModal");
+ modal.style.display="block";
+}
+function closeBarter(){
+ document.getElementById("barterModal").style.display="none";
+}
+</script>
+<div id="barterModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeBarter()">×</span>
+<img src="assets/barter.png">
+<h2>1. Pengertian Barter</h2>
+<p><b>Barter adalah kegiatan pertukaran barang atau jasa dengan barang atau jasa lainnya tanpa menggunakan uang sebagai alat pembayaran.</b> Sistem barter merupakan salah satu bentuk kegiatan ekonomi yang dilakukan manusia sebelum mengenal uang.</p>
+
+<h2>2. Kondisi Manusia Sebelum Mengenal Uang</h2>
+<p>Sebelum mengenal uang, manusia memenuhi kebutuhan hidup dengan memanfaatkan sumber daya yang tersedia di lingkungan sekitarnya.</p>
+<p>Pada awalnya, masyarakat dapat memenuhi kebutuhan hidup dari alam. Ketika kebutuhan semakin beragam dan masyarakat mulai hidup menetap serta melakukan kegiatan ekonomi, mereka mulai melakukan pertukaran barang.</p>
+<p>Dengan demikian, manusia pada masa sebelum mengenal uang menggunakan sistem barter untuk memperoleh barang yang tidak mereka miliki.</p>
+
+<h2>3. Proses Pertukaran Barang</h2>
+<p>Proses barter terjadi ketika seseorang memiliki barang yang ingin ditukar dan membutuhkan barang milik orang lain.</p>
+<p><b>Memiliki barang → Membutuhkan barang lain → Mencari orang yang sesuai → Kesepakatan nilai pertukaran → Barang ditukar</b></p>
+<p>Kedua pihak harus sama-sama membutuhkan barang yang dimiliki pihak lain.</p>
+
+<h2>4. Contoh Barter</h2>
+<p><b>Contoh 1:</b> Andi memiliki beras dan membutuhkan ikan. Budi memiliki ikan dan membutuhkan beras. Keduanya sepakat menukarkan barang.</p>
+<p><b>Contoh 2:</b> Petani menukar sayuran dengan telur.</p>
+
+<h2>5. Kelemahan Barter</h2>
+<ul>
+<li>Sulit menemukan orang yang memiliki kebutuhan yang sama.</li>
+<li>Sulit menentukan nilai pertukaran.</li>
+<li>Tidak semua barang mudah dibagi.</li>
+<li>Tidak semua barang mudah disimpan.</li>
+<li>Sulit melakukan transaksi dalam jumlah besar.</li>
+<li>Sulit menentukan ukuran nilai.</li>
+<li>Membutuhkan waktu dan tenaga.</li>
+</ul>
+
+<h2>6. Alasan Munculnya Uang</h2>
+<p>Sistem barter memiliki banyak keterbatasan sehingga manusia membutuhkan alat pertukaran yang lebih praktis.</p>
+<ul>
+<li>Mempermudah pertukaran barang dan jasa.</li>
+<li>Menjadi alat tukar yang diterima masyarakat.</li>
+<li>Menjadi alat ukur nilai barang.</li>
+<li>Mempermudah transaksi dan penyimpanan nilai.</li>
+</ul>
+
+<h2>Kesimpulan</h2>
+<p><b>Barter → memiliki banyak kelemahan → manusia membutuhkan alat tukar yang lebih praktis → muncullah uang.</b></p>
+</div></div>
+<script>
+function openBarter(){document.getElementById("barterModal").style.display="block";}
+function closeBarter(){document.getElementById("barterModal").style.display="none";}
+</script>
+
+<div id="uangBarangModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeUangBarang()">×</span>
+<h2>🐚 Uang Barang</h2>
+<img src="assets/uang_barang.png">
+
+<h3>1. Pengertian Uang Barang</h3>
+<p><b>Uang barang adalah benda yang memiliki nilai dan digunakan sebagai alat tukar untuk memperoleh barang atau jasa lain.</b></p>
+<p>Pada tahap ini, masyarakat mulai menggunakan benda-benda tertentu yang dianggap bernilai dan dapat diterima oleh masyarakat sebagai alat pertukaran.</p>
+
+<h3>2. Contoh Uang Barang</h3>
+<ul>
+<li>🧂 Garam</li>
+<li>🐚 Kulit kerang</li>
+<li>🌿 Benda bernilai lainnya seperti rempah-rempah</li>
+</ul>
+
+<h3>3. Contoh Penggunaan</h3>
+<p>Seseorang memiliki hasil pertanian dan ingin memperoleh garam. Garam yang memiliki nilai dapat digunakan sebagai alat untuk melakukan pertukaran.</p>
+
+<h3>4. Perkembangan Sederhana</h3>
+<p><b>Barter → Uang Barang → Uang Logam → Uang Kertas → Uang Elektronik</b></p>
+
+<h3>5. Kesimpulan</h3>
+<p>Uang barang menjadi salah satu tahap perkembangan alat tukar setelah sistem barter, ketika masyarakat mulai menggunakan benda tertentu yang memiliki nilai sebagai alat pertukaran.</p>
+</div>
+</div>
+<script>
+function openUangBarang(){document.getElementById("uangBarangModal").style.display="block";}
+function closeUangBarang(){document.getElementById("uangBarangModal").style.display="none";}
+</script>
+
+<div id="uangLogamModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeUangLogam()">×</span>
+<img src="assets/uang_logam.png">
+<h2>🪙 Uang Logam</h2>
+<h3>1. Pengertian Uang Logam</h3>
+<p><b>Uang logam adalah uang yang dibuat dari bahan logam dan digunakan sebagai alat pembayaran yang sah.</b> Uang logam merupakan salah satu tahap penting dalam perkembangan uang setelah masyarakat menggunakan benda-benda bernilai sebagai alat tukar.</p>
+<h3>2. Kelebihan Uang Logam</h3>
+<ul>
+<li><b>Tahan lama</b> dan tidak mudah rusak.</li>
+<li><b>Mudah dibawa</b> untuk melakukan transaksi.</li>
+<li><b>Mudah dihitung</b> berdasarkan nilai yang tercantum.</li>
+<li>Dapat digunakan berulang kali dalam kegiatan ekonomi.</li>
+<li>Lebih praktis dibandingkan menukar barang secara langsung.</li>
+</ul>
+<h3>3. Contoh Penggunaan</h3>
+<p>Seseorang ingin membeli makanan seharga <b>Rp5.000</b>. Ia dapat membayar menggunakan uang logam sesuai pecahan yang tersedia.</p>
+<h3>4. Posisi dalam Sejarah Perkembangan Uang</h3>
+<p><b>Barter → Uang Barang → Uang Logam → Uang Kertas → Uang Fiat → Uang Elektronik</b></p>
+</div></div>
+<script>
+function openUangLogam(){document.getElementById("uangLogamModal").style.display="block";}
+function closeUangLogam(){document.getElementById("uangLogamModal").style.display="none";}
+</script>
+
+
+<div id="pendahuluanModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closePendahuluan()">×</span>
+<h2>🌎 Pendahuluan Perkembangan Ekonomi Digital</h2>
+<p>Simak video pembelajaran berikut untuk memahami gambaran awal perkembangan ekonomi digital dan perjalanan sistem ekonomi manusia.</p>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:20px;">
+<iframe src="https://www.youtube.com/embed/T-eDqr1dG3s" 
+style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
+allowfullscreen></iframe>
+</div>
+</div>
+</div>
+
+<script>
+function openPendahuluan(){document.getElementById("pendahuluanModal").style.display="block";}
+function closePendahuluan(){document.getElementById("pendahuluanModal").style.display="none";}
+</script>
+
+
+<div id="sejarahModal" class="modal"><div class="modal-content">
+<span class="close" onclick="closeSejarahUang()">×</span>
+<h2>📜 Sejarah Perkembangan Uang</h2>
+<p>Bagian sejarah uang dapat berisi perkembangan uang dari masa kerajaan, kolonial, kemerdekaan, hingga era digital.</p>
+</div></div>
+<script>
+function openSejarahUang(){document.getElementById("sejarahModal").style.display="block";}
+function closeSejarahUang(){document.getElementById("sejarahModal").style.display="none";}
+</script>
+
+<div id="faktorModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeFaktorUang()">×</span>
+<img src="assets/faktor_uang.png">
+
+<h2>🚀 Faktor yang Mendorong Terciptanya Uang</h2>
+
+<p>Beberapa faktor yang mendorong terciptanya uang yaitu:</p>
+
+<h3>1. Kesulitan dalam melakukan barter</h3>
+<p>Dalam barter, seseorang harus menemukan orang yang memiliki barang yang dibutuhkan dan pada saat yang sama membutuhkan barang yang dimiliki.</p>
+
+<h3>2. Sulit menentukan nilai suatu barang</h3>
+<p>Barter tidak memiliki ukuran nilai yang pasti.</p>
+
+<h3>3. Kebutuhan manusia semakin beragam</h3>
+<p>Semakin berkembang kehidupan masyarakat, semakin banyak pula kebutuhan manusia. Pertukaran barang secara langsung menjadi semakin tidak praktis.</p>
+
+<h3>4. Sulit menyimpan nilai</h3>
+<p>Beberapa barang hasil barter mudah rusak atau tidak dapat disimpan dalam waktu lama, seperti ikan, buah, dan sayuran.</p>
+
+<h3>5. Sulit melakukan transaksi</h3>
+<p>Barter membutuhkan proses mencari barang dan pihak yang tepat untuk melakukan pertukaran. Hal ini membutuhkan waktu dan tenaga.</p>
+
+<h3>6. Dibutuhkan alat tukar yang diterima bersama</h3>
+<p>Masyarakat membutuhkan sesuatu yang dapat diterima oleh banyak orang sehingga transaksi tidak harus selalu dilakukan dengan pertukaran barang secara langsung.</p>
+
+<h3>7. Dibutuhkan alat ukur nilai</h3>
+<p>Masyarakat membutuhkan suatu alat yang dapat digunakan untuk menentukan dan membandingkan nilai berbagai barang dan jasa. Inilah yang kemudian menjadi salah satu fungsi asli uang.</p>
+
+</div>
+</div>
+
+<script>
+</script>
+
+
+<div id="sejarahUangModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeSejarahUang()">×</span>
+<h2>📜 Sejarah Perkembangan Uang di Indonesia</h2>
+<img src="assets/sejarah_uang.png">
+<p>Gambar menampilkan perjalanan perkembangan uang di Indonesia dari masa awal pertukaran hingga penggunaan uang modern.</p>
+</div>
+</div>
+<script>
+function openSejarahUang(){document.getElementById("sejarahUangModal").style.display="block";}
+function closeSejarahUang(){document.getElementById("sejarahUangModal").style.display="none";}
+</script>
+
+
+<div id="fungsiUangModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeFungsiUang()">×</span>
+<h2>💡 Fungsi Uang</h2>
+<img src="assets/fungsi_uang.png">
+
+<h3>1. Alat Tukar</h3>
+<p>Mempermudah transaksi jual beli.</p>
+
+<h3>2. Alat Ukur Nilai</h3>
+<p>Menentukan harga atau nilai barang dan jasa.</p>
+
+<h3>3. Alat Pengumpul Kekayaan</h3>
+<p>Menyimpan nilai untuk masa depan.</p>
+
+<h3>4. Alat Investasi</h3>
+<p>Digunakan untuk mendapatkan keuntungan.</p>
+
+<h3>5. Alat Komoditas Perdagangan</h3>
+<p>Uang dapat diperjualbelikan dalam kegiatan perdagangan.</p>
+
+</div>
+</div>
+
+<script>
+function openFungsiUang(){
+document.getElementById("fungsiUangModal").style.display="block";
+}
+function closeFungsiUang(){
+document.getElementById("fungsiUangModal").style.display="none";
+}
+</script>
+
+
+
+<div id="jenisUangModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeJenisUang()">×</span>
+<h2>💳 Jenis-Jenis Uang</h2>
+<img src="assets/jenis_uang.png">
+</div>
+</div>
+<script>
+function openJenisUang(){document.getElementById("jenisUangModal").style.display="block";}
+function closeJenisUang(){document.getElementById("jenisUangModal").style.display="none";}
+</script>
+
+<div id="lkpdModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeLKPD()">×</span>
+<h2>📘 LKPD Misi Uang</h2>
+<img src="assets/lkpd_misi_uang.png" alt="LKPD Misi Uang">
+</div>
+</div>
+<script>
+function openLKPD(){document.getElementById("lkpdModal").style.display="block";}
+function closeLKPD(){document.getElementById("lkpdModal").style.display="none";}
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"name":"e-porto-misi-uang","version":"1.0.0","private":true,"type":"module","engines":{"node":">=22.13.0"},"scripts":{"setup":"node server.mjs setup","start":"node server.mjs"}}
